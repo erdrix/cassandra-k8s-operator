@@ -253,6 +253,17 @@ You can run Unit-test for CassKop
 make unit-test
 ```
 
+### Run docker image tests
+
+We rely on dgoss for testing our init-containers scripts.
+
+You first need to install [dgoss](https://github.com/aelsabbahy/goss/tree/master/extras/dgoss) on your system, then you
+could trigger the tests:
+
+````
+make dgoss-bootstrap
+```
+
 ### Run e2e end to end tests
 
 CassKop also have several end-to-end tests that can be run using makefile.
