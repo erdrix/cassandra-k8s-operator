@@ -105,7 +105,8 @@ func (rcc *ReconcileCassandraCluster) executePodOperation(cc *api.CassandraClust
 		rcc.finalizeOperations(cc)
 
 		// We run approximately a different operation each time
-		rcc.ensureOperation(cc, dcName, rackName, status, randomPodOperationKey())
+		// rcc.ensureOperation(cc, dcName, rackName, status, randomPodOperationKey())
+		rcc.ensureOperation(cc, dcName, rackName, status, api.OperationCleanup)
 	}
 
 	return breakResyncloop, err
