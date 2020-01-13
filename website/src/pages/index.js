@@ -22,8 +22,8 @@ const features = [
     imageUrl: 'img/operator-sdk.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        CassKop will define a new Kubernetes object named CassandraCluster which will be used to describe 
+        and instantiate a Cassandra Cluster in Kubernetes
       </>
     ),
   },
@@ -32,8 +32,7 @@ const features = [
     imageUrl: 'img/open_source.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Open source software released under the Apache 2.0 license.
       </>
     ),
   },
@@ -42,8 +41,8 @@ const features = [
     imageUrl: 'img/kubernetes.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        CassKop is a Kubernetes custom controller which will loop over events on CassandraCluster objects and 
+        reconcile with kubernetes resources needed to create a valid Cassandra Cluster deployment.
       </>
     ),
   },
@@ -52,8 +51,8 @@ const features = [
     imageUrl: 'img/namespace.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        CassKop is listening only in the Kubernetes namespace it is deployed in, and
+        is able to manage several Cassandra Clusters within this namespace.
       </>
     ),
   },
@@ -62,8 +61,10 @@ const features = [
     imageUrl: 'img/cassandra.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Casskop manage a list of operations, with 2 levels : 
+        Cluster operations which apply at cluster level and which have a dedicated status in each racks
+        and Pod operations which apply at pod level and can be triggered by specifics pods labels. 
+        Status of pod operations are also followed up at rack level.
       </>
     ),
   },
@@ -72,8 +73,8 @@ const features = [
     imageUrl: 'img/dc.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        For having more resilience with our Cassandra cluster, we want to be able to spread it on several regions. 
+        For doing this with Kubernetes, we need that our Cassandra to spread on top of different Kubernetes clusters, deployed independently on different regions.
       </>
     ),
   }
