@@ -701,6 +701,7 @@ func (rcc *ReconcileCassandraCluster) runRebuild(hostName string, cc *api.Cassan
 		cc.Spec.ImageJolokiaSecret, cc.Namespace)
 	if err == nil {
 		err = jolokiaClient.NodeRebuild(rebuildFrom)
+
 	}
 	return err
 }

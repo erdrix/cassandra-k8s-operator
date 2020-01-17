@@ -1,7 +1,7 @@
 ---
 id: 3_cassandra_pods_operations
-title: Cluster operations
-sidebar_label: Cluster operations
+title: Cassandra pods operations
+sidebar_label: Cassandra pods operations
 ---
 
 Some Pods Operations can be triggered automatically by CassKop if :
