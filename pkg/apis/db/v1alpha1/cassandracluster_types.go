@@ -627,7 +627,7 @@ type CassandraClusterSpec struct {
 	CassandraImage string `json:"cassandraImage,omitempty"`
 
 	//ImagePullPolicy define the pull policy for C* docker image
-	ImagePullPolicy v1.PullPolicy `json:"imagepullpolicy,omitempty"`
+	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy,omitempty"`
 
 	// Image used for bootstrapping cluster (use the form : base:version)
 	BootstrapImage string `json:"bootstrapImage,omitempty"`

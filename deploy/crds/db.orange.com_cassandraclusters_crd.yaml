@@ -88,6 +88,9 @@ spec:
                     TODO: Add other useful fields. apiVersion, kind, uid?'
                   type: string
               type: object
+            imagePullPolicy:
+              description: ImagePullPolicy define the pull policy for C* docker image
+              type: string
             imagePullSecret:
               description: Name of the secret to uses to authenticate on Docker registries
                 If this is empty, operator do nothing If this is not empty, propagate
@@ -98,9 +101,6 @@ spec:
                     TODO: Add other useful fields. apiVersion, kind, uid?'
                   type: string
               type: object
-            imagepullpolicy:
-              description: ImagePullPolicy define the pull policy for C* docker image
-              type: string
             initContainerCmd:
               description: Command to execute in the initContainer in the targeted
                 image
