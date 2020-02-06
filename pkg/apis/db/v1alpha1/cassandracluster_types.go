@@ -629,6 +629,9 @@ type CassandraClusterSpec struct {
 	//ImagePullPolicy define the pull policy for C* docker image
 	ImagePullPolicy v1.PullPolicy `json:"imagePullPolicy,omitempty"`
 
+	//The Partition to control the Statefulset Upgrade
+	RollingPartition int32 `json:"rollingPartition,omitempty"`
+
 	// Image used for bootstrapping cluster (use the form : base:version)
 	BootstrapImage string `json:"bootstrapImage,omitempty"`
 
