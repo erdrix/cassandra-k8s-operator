@@ -40,7 +40,9 @@ func UpdateRestoreStatus(c client.Client, restore *api.CassandraRestore, status 
 }
 
 func updateRestoreStatus(c client.Client, restore *api.CassandraRestore) error {
-	if err := c.Status().Update(context.TODO() , restore); apierrors.IsNotFound(err) {
+	//if err := c.Status().Update(context.TODO() , restore); apierrors.IsNotFound(err) {
+	err := c.Status().Update(context.TODO() , restore);
+	if apierrors.IsNotFound(err) {
 		return c.Update(context.TODO(), restore)
 	}
 	return nil
